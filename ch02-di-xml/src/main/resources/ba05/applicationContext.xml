@@ -25,7 +25,7 @@
           注意:在byType中,在xml配置文件中声明bean只能有一个符合条件的，
               多余一个是错误的
         -->
-        <!--byname-->
+        <!--byType-->
         <bean id="myStudent" class="com.hongshu.ba05.Student" autowire="byType">
                 <property name="name" value="张五" /> <!--setName("张三")-->
                 <property name="age" value="15" /> <!--setAge(20)-->
