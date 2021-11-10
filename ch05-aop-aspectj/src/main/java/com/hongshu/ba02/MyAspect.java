@@ -64,10 +64,10 @@ public class MyAspect
     }
 
     @AfterReturning(value = "execution(* *..SomeServiceImpl.doOther2(..))",returning = "res")
-    public void myAfterReturning2(Object res)
+    public void myAfterReturning2(JoinPoint jp,Object res)
     {
         // Object res:是目标方法执行后的返回值，根据返回值做你的切面的功能处理
-        //System.out.println("后置通知：方法的定义"+ res.getSignature());
+        System.out.println("后置通知：方法的定义"+ jp.getSignature());
         System.out.println("后置通知：在目标方法之后执行的，获取的返回值是："+res);
         //修改目标方法的返回值，看一下是否会影响 最后的方法调用结果
         //如果修改了res的内容，属性值等，是不是会影响最后的调用结果呢
