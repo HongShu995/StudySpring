@@ -27,7 +27,8 @@ public class MyApp
         //使用Proxy创建代理
         SomeService proxy = (SomeService) Proxy.newProxyInstance(service.getClass().getClassLoader()
                 ,service.getClass().getInterfaces(),handler);
-
+        //proxy:com.sun.proxy.$Proxy0
+        System.out.println("proxy:"+proxy.getClass().getName());
         //通过代理执行方法，会调用handler中的invoke()
         proxy.doSome();
         System.out.println("====================");
