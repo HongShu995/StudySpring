@@ -13,9 +13,9 @@ public class MyTest
         String config = "applicationContext.xml";
         ApplicationContext ac = new ClassPathXmlApplicationContext(config);
         BuyGoodsService service = (BuyGoodsService) ac.getBean("buyGoodsService");
-        //service是代理：com.sun.proxy.$Proxy16:jdk动态代理对象
+        //service是代理：com.sun.proxy.$Proxy12:jdk动态代理对象
         System.out.println("service是代理："+service.getClass().getName());
-        service.buy(1001,10);
+        service.buy(1005,10);
 
     }
 }
